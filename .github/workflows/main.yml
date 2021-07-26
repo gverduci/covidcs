@@ -25,6 +25,9 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
 
+      - name: Install xmllint
+        run: sudo apt-get install libxml2-dev libxslt-dev python-dev
+
       # Set up Python
       - name: Set up Python
         uses: actions/setup-python@v2

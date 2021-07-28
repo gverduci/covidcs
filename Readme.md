@@ -1,10 +1,11 @@
+Data source:
 http://www.asp.cosenza.it/?p=covid19-grafici
 
-esempio estrazione dati da tabella:
+Command to extract data from table "Casi Covid-19 - Distribuzione per comune e per collocazione" (results in data folder):
 python3 getdata.py
 
-esempio estrazione dati da mappa:
+Command to extract data from map "Casi Covid-19 - Distribuzione dei casi degli ultimi 30 giorni per comune" (results in data folder):
 python3 getdatamap.py
 
-esempio estrazione comune:
+Command to filter data by Comune:
 python3 comune.py "MONTALTO UFFUGO"

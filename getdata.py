@@ -18,7 +18,7 @@ jsonColumnsstr = jsonColumnsstr.partition(",\n")[0]
 oJsonColumns = json.loads(jsonColumnsstr)["rows"]
 
 jsonstr = data.text.partition("_Flourish_data =")[2]
-jsonstr = jsonstr.partition(";")[0]
+jsonstr = jsonstr.partition(",\n")[0]
 oJson = json.loads(jsonstr)["rows"]
 numComuni = len(oJson)
 

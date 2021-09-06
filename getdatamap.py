@@ -6,7 +6,7 @@ import time
 import os
 
 #my_url = 'https://flo.uri.sh/visualisation/5338483/embed?auto=1'  
-my_url = 'https://flo.uri.sh/visualisation/6132168/embed?auto=1'
+my_url = 'https://flo.uri.sh/visualisation/6142681/embed?auto=1'
 ret = requests.get(my_url)
 
 page_soup = soup(ret.text, 'lxml')
@@ -17,7 +17,7 @@ jsonColumnsstr = jsonColumnsstr.partition(",\n")[0]
 oJsonColumns = json.loads(jsonColumnsstr)["points"]
 
 jsonstr = data.text.partition("_Flourish_data =")[2]
-jsonstr = jsonstr.partition(";")[0]
+jsonstr = jsonstr.partition(",\n")[0]
 oJson = json.loads(jsonstr)["points"]
 numComuni = len(oJson)
 

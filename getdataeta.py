@@ -26,7 +26,7 @@ resultsHeader = []
 results = []
 
 resultsHeader.append([oJsonColumns['label'], oJsonColumns['value'][0], oJsonColumns['value'][1]])
-print(resultsHeader)
+# print(resultsHeader)
 
 for comune in oJson:
     results.append([comune['label'], comune['value'][0], comune['value'][1]])

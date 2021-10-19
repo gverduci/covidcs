@@ -13,7 +13,7 @@ with open(os.path.join(os.getcwd(), filename.replace(" ", "_") + ".csv"), mode='
             if file.endswith("_eta.csv"):
                 #print(os.path.join(r1, file))
                 with open(os.path.join(r, file)) as csvfile:
-                    print(file)
+                    # print(file)
                     readCSV = csv.reader(csvfile, delimiter=',')
                     data = file.split("-")[0]
                     f0018 = 0

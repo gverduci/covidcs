@@ -14,7 +14,7 @@ with open(os.path.join(os.getcwd(), comune.replace(" ", "_") + ".csv"), mode='w'
             if not(file.endswith("_map.csv")):
                 #print(os.path.join(r1, file))
                 with open(os.path.join(r, file)) as csvfile:
-                    print(file)
+                    # print(file)
                     readCSV = csv.reader(csvfile, delimiter=',')
                     for row in readCSV:
                         if row[0] == comune:

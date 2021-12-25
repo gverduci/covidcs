@@ -23,7 +23,7 @@ with open(os.path.join(os.getcwd(), comune.replace(" ", "_") + "_wk.csv"), mode=
                 print(weekData)
                 weekSum = sum(weekData)
                 print(weekSum)
-                cases = round(100000 * weekSum / int(abitanti))
+                cases = round(100000 * weekSum / 7 / int(abitanti))
                 week = datetime.datetime.strptime(row[0], '%Y%m%d').isocalendar()[1]
                 out_writer.writerow([row[0], row[1], int(row[2]), incremento, week + 1, cases])
                 precValue = int(row[2])

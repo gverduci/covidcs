@@ -26,6 +26,13 @@ for idx, comune in enumerate(sys.argv, start=0):
                 df["Data"] = weeks
             df[comune] = results
 
-plt = df.plot(x="Data", y=comuni, title="Casi/100000 x settimana", figsize=(12,8))
+plt = df.plot(style=".-", grid="true", x="Data", y=comuni, title="Nuovi casi giornalieri per 100000 ab - media mobile 7gg", figsize=(16,9))
+
+for l in plt.lines:
+    y = l.get_ydata()
+    if len(y)>0:
+        plt.annotate(f'{y[-1]:.0f}', xy=(1,y[-1]), xycoords=('axes fraction', 'data'), 
+                     ha='left', va='center', color=l.get_color())
+
 fig = plt.get_figure()
 fig.savefig("plot.png")

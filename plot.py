@@ -2,6 +2,7 @@ import pandas as pd
 import os
 import sys
 import csv
+from datetime import datetime
 
 # for idx, comune in enumerate(sys.argv, start=0):
 #     if idx > 0:
@@ -26,7 +27,7 @@ for idx, comune in enumerate(sys.argv, start=0):
                 df["Data"] = weeks
             df[comune] = results
 
-plt = df.plot(style=".-", grid="true", x="Data", y=comuni, title="Nuovi casi giornalieri per 100000 ab - media mobile 7gg", figsize=(16,9))
+plt = df.plot(style=".-", grid="true", x="Data", y=comuni, title="Nuovi casi giornalieri per 100000 ab - media mobile 7gg (" + datetime.now().strftime("%d-%b-%Y %H:%M:%S") + ")", figsize=(16,9))
 
 for l in plt.lines:
     y = l.get_ydata()

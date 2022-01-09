@@ -24,7 +24,7 @@ for idx, comune in enumerate(sys.argv, start=0):
                         weeks.append(row[0])
                     results.append(int(row[5]))
             if idx == 1:
-                df["Data"] = weeks
+                df["Data"] = pd.to_datetime(weeks, infer_datetime_format=True)
             df[comune] = results
 
 plt = df.plot(style=".-", grid="true", x="Data", y=comuni, title="Nuovi casi giornalieri per 100000 ab - media mobile 7gg (" + datetime.now().strftime("%d-%b-%Y %H:%M:%S") + ")", figsize=(16,9))
@@ -35,5 +35,14 @@ for l in plt.lines:
         plt.annotate(f'{y[-1]:.0f}', xy=(1,y[-1]), xycoords=('axes fraction', 'data'), 
                      ha='left', va='center', color=l.get_color())
 
+# Customize the major grid
+plt.grid(which='major', linewidth='1', color='black')
+# Customize the minor grid
+plt.minorticks_on()
+xtick = df["Data"]
+plt.set_xticks( xtick, minor=True )
+plt.grid(which='minor', linestyle=':', linewidth='0.5', color='black')
+
 fig = plt.get_figure()
+
 fig.savefig("plot.png")

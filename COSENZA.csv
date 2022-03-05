@@ -243,7 +243,7 @@ Data,Comune,Casi da inizio pandemia,Deceduti da inizio pandemia,Attuali ricovera
 20220129,COSENZA,4404,75,-,-,-
 20220130,COSENZA,4445,75,-,-,-
 20220131,COSENZA,4448,75,-,-,-
-20220201,COSENZA,39.29308673,16.25609864,-,-,-
+20220201,COSENZA,4448,75,-,-,-
 20220202,COSENZA,4513,76,-,-,-
 20220203,COSENZA,4553,76,-,-,-
 20220204,COSENZA,4573,76,-,-,-
@@ -275,3 +275,4 @@ Data,Comune,Casi da inizio pandemia,Deceduti da inizio pandemia,Attuali ricovera
 20220302,COSENZA,5397,91,-,-,-
 20220303,COSENZA,5482,91,-,-,-
 20220304,COSENZA,5576,92,-,-,-
+20220305,COSENZA,5667,93,-,-,-

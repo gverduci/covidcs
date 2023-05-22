@@ -9,3 +9,5 @@ python3 getdatamap.py
 
 Command to filter data by Comune:
 python3 comune.py "MONTALTO UFFUGO"
+
+2023-05-22: Action disabled because the data source was discontinued on 2023-04-30
